@@ -1,0 +1,9 @@
+distance_km,traffic_level,weather,package_weight,delivery_slot,fuel_cost,delay_minutes,delivery_cost
+120,High,Rain,15,Evening,9.5,38,1750
+45,Low,Clear,5,Morning,8.2,5,420
+90,Medium,Fog,10,Afternoon,8.8,22,980
+200,High,Rain,25,Evening,10.5,55,2800
+30,Low,Clear,3,Morning,7.8,2,300
+150,Medium,Rain,20,Afternoon,9.2,30,1600
+80,Medium,Clear,8,Evening,8.5,15,750
+60,Low,Fog,6,Morning,8.0,10,600
