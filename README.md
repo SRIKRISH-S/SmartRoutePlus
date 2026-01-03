@@ -90,3 +90,27 @@ This UI demonstrates how the model can be used in a real operational environment
 ---
 
 ## 📂 Project Structure
+SmartRoutePlus/
+├── app/
+│ └── app.py
+├── data/
+│ └── logistics_data.csv
+├── model/
+│ └── delay_cost_model.pkl
+├── train_model.py
+├── README.md
+
+
+---
+
+## ▶️ How to Run the Project
+
+### 1️⃣ Install Dependencies
+```bash
+pip install pandas scikit-learn streamlit joblib
+
+2️⃣ Train the Model
+python train_model.py
+
+3️⃣ Run the Web Application
+streamlit run app/app.py
