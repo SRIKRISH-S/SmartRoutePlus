@@ -1,153 +1,92 @@
-🚚 SmartRoutePlus
-AI-Based Delivery Delay & Cost Optimization System
+# 🚚 SmartRoutePlus  
+## AI-Based Delivery Delay & Cost Optimization System
 
-SmartRoutePlus is a data-driven logistics optimization system developed for the FedEx SMART Hackathon at Shaastra 2026.
-It leverages machine learning to predict delivery delays and estimate delivery costs, enabling smarter routing decisions and improved operational efficiency in logistics.
+SmartRoutePlus is an end-to-end **machine learning–based logistics optimization system** developed for the **FedEx SMART Hackathon** conducted as part of **Shaastra 2026**.  
+The project focuses on predicting **delivery delays** and **delivery costs** using data-driven intelligence to support smarter and more efficient logistics operations.
 
-📌 Problem Statement
+---
 
-Logistics companies such as FedEx face persistent challenges including:
+## 📌 Problem Statement
+Logistics companies such as **:contentReference[oaicite:0]{index=0}** face critical operational challenges including:
+- Unpredictable delivery delays  
+- Rising fuel and transportation costs  
+- Traffic congestion and adverse weather conditions  
+- Inefficient route planning and prioritization  
 
-Unpredictable delivery delays
+Most existing systems are **reactive**, responding only after delays occur, which results in increased cost and customer dissatisfaction.
 
-Increased fuel and operational costs
+---
 
-Traffic congestion and weather disruptions
+## 💡 Proposed Solution
+SmartRoutePlus introduces a **predictive and proactive approach** to logistics management by:
+- Predicting delivery delays in advance  
+- Estimating delivery costs using multiple influencing factors  
+- Providing an interactive dashboard for scenario simulation  
 
-Inefficient route prioritization
+This allows logistics managers to make **data-driven decisions** before deliveries are executed.
 
-Existing systems are mostly reactive, addressing problems only after delays occur.
+---
 
-💡 Proposed Solution
+## 🧠 System Workflow
+1. User inputs logistics parameters (distance, traffic, weather, etc.)
+2. Data is preprocessed and categorical features are encoded
+3. A machine learning regression model is applied
+4. The system predicts:
+   - ⏱️ Delivery delay (in minutes)
+   - 💰 Estimated delivery cost (in ₹)
+5. Results are displayed via a simple and interactive web interface
 
-SmartRoutePlus introduces a predictive and data-driven approach by:
+---
 
-Predicting delivery delays in advance
+## 📊 Dataset Description
+The dataset used in this project is **synthetically generated** to closely resemble real-world logistics scenarios.
 
-Estimating delivery costs based on multiple factors
+### Input Features
+- `distance_km` – Delivery distance in kilometers  
+- `traffic_level` – Low / Medium / High  
+- `weather` – Clear / Rain / Fog  
+- `package_weight` – Package weight in kilograms  
+- `delivery_slot` – Morning / Afternoon / Evening  
+- `fuel_cost` – Fuel cost per kilometer  
 
-Providing an interactive dashboard for decision-makers
+### Target Variables
+- `delay_minutes` – Delivery delay  
+- `delivery_cost` – Estimated delivery cost  
 
-This enables logistics teams to take proactive actions to reduce delays and optimize costs.
+> ⚠️ Note: Real logistics datasets are proprietary. Hence, realistic assumptions were used to simulate data while maintaining industry relevance.
 
-🧠 System Overview
+---
 
-Input logistics parameters (distance, traffic, weather, etc.)
+## 🤖 Machine Learning Model
+- **Model Type:** Supervised Regression  
+- **Algorithm Used:** Random Forest Regressor  
 
-Preprocess data and encode categorical features
+### Why Random Forest?
+- Handles non-linear relationships effectively  
+- Robust to noise and overfitting  
+- Interpretable and widely used in industry  
 
-Apply a machine learning regression model
+### Evaluation Metric
+- Mean Absolute Error (MAE)
 
-Predict:
+---
 
-⏱️ Delivery delay (minutes)
+## 🖥️ User Interface
+The project includes a **Streamlit-based web application** that enables users to:
+- Enter delivery-related parameters  
+- Instantly view predicted delay and cost  
+- Experiment with multiple logistics scenarios  
 
-💰 Estimated delivery cost (₹)
+This UI demonstrates how the model can be used in a real operational environment.
 
-Display results through a simple web interface
+---
 
-📊 Dataset Description
+## 🛠️ Technology Stack
+- **Language:** Python  
+- **Libraries:** Pandas, NumPy, Scikit-learn  
+- **Model Serialization:** Joblib  
+- **Frontend/UI:** Streamlit  
 
-The dataset used is synthetically generated, designed to closely resemble real-world logistics scenarios.
+---
 
-Features:
-
-distance_km – Distance of delivery
-
-traffic_level – Low / Medium / High
-
-weather – Clear / Rain / Fog
-
-package_weight – Weight of the package (kg)
-
-delivery_slot – Morning / Afternoon / Evening
-
-fuel_cost – Fuel cost per kilometer
-
-Targets:
-
-delay_minutes – Delivery delay
-
-delivery_cost – Total delivery cost
-
-📌 Note: The dataset is simulated due to the unavailability of proprietary logistics data, while maintaining realistic assumptions.
-
-🤖 Machine Learning Model
-
-Model Used: Random Forest Regressor
-
-Type: Supervised Regression
-
-Why Random Forest?
-
-Handles non-linear relationships
-
-Robust to noise
-
-Interpretable and industry-friendly
-
-Evaluation Metric:
-
-Mean Absolute Error (MAE)
-
-🖥️ User Interface
-
-The application includes a Streamlit-based interactive dashboard that allows users to:
-
-Input delivery parameters
-
-Instantly view predicted delay and cost
-
-Simulate different logistics scenarios
-
-🛠️ Tech Stack
-
-Programming Language: Python
-
-Libraries: Pandas, NumPy, Scikit-learn
-
-Model Deployment: Joblib
-
-Frontend/UI: Streamlit
-
-📂 Project Structure
-SmartRoutePlus/
-├── data/
-│   └── logistics_data.csv
-├── model/
-│   └── delay_cost_model.pkl
-├── app/
-│   └── app.py
-├── train_model.py
-├── requirements.txt
-├── README.md
-
-▶️ How to Run the Project
-1️⃣ Install Dependencies
-pip install pandas scikit-learn streamlit joblib
-
-2️⃣ Train the Model
-python train_model.py
-
-3️⃣ Run the Application
-streamlit run app/app.py
-
-📈 Business Impact
-
-📉 Reduction in delivery delays (up to ~20%)
-
-⛽ Optimized fuel usage and operational cost
-
-📊 Better planning through predictive insights
-
-😊 Improved customer satisfaction
-
-🚀 Scalability & Future Enhancements
-
-Integration with real-time GPS tracking
-
-Live traffic and weather APIs
-
-Route optimization algorithms
-
-Enterprise-level deployment
+## 📂 Project Structure
